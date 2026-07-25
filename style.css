@@ -1,5 +1,5 @@
 .logo {
-  height: 200px;
+  height: 50px;
   width: 300px;
 }
 * {
@@ -27,6 +27,9 @@ body {
   color: var(--text-black);
   overflow-x: hidden;
 }
+
+/* nav css */
+
 a,
 a:hover {
   text-decoration: none;
@@ -46,5 +49,67 @@ p {
   background: transparent;
 }
 #header .fixed-top {
-  box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 5%);
+  box-shadow: 0 0.925rem 0.875rem rgb(0 0 0 / 5%);
+}
+#header .navbar-nav .nav-item .nav-link {
+  color: var(--text-black);
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+#header .navbar-nav .nav-item .nav-link:hover,
+#header .navbar-nav .nav-item .nav-link.active {
+  color: var(--text-danger);
+}
+
+/* home css */
+
+.home .home-banner-1,
+.home .home-banner-2 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 90% center;
+  min-height: 650px;
+  position: relative;
+}
+.home .home-banner-1 {
+  background-image: url(https://th.bing.com/th/id/R.931432e551d0e915d9763a53e5300474?rik=I5OUV%2bKPAv5oMQ&riu=http%3a%2f%2fwww.fashiongonerogue.com%2fwp-content%2fuploads%2f2013%2f08%2fzara-fall-ads4.jpg&ehk=myHmls4wAWIYHxpq25IwG369tkhxdqlluzMpcDmd2Bo%3d&risl=&pid=ImgRaw&r=0);
+}
+.home .home-banner-2 {
+  background-image: url(https://media.istockphoto.com/id/1468581382/photo/beautiful-asian-female-woman-girl-holding-shopping-bags-walk-enjoy-smiling-while-doing.jpg?s=170667a&w=0&k=20&c=PFsRo035spUj5sxYE7oyuW94lkIz8ie7zitfx4gIcMI=);
+}
+.home .home-banner .home-banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-110%, -50%);
+}
+.home .home-banner .home-banner-text h1 {
+  font-size: 6rem;
+}
+.home .carousel-indicators [data-bs-target] {
+  background-color: var(--bg-danger);
+  width: 2.5rem;
+  height: 0.313rem;
+}
+.home .carousel-control-next-icon,
+.home .carousel-control-prev-icon {
+  background: transparent;
+}
+.home .slider-icon {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--text-danger);
+}
+
+/* media queries in all...i have screenshots */
+
+@media (max-width: 1030px) {
+  .home .home-banner-1,
+  .home .home-banner-2 {
+    background-position: 65% center;
+    min-height: 550px;
+  }
+  .home .home-banner .home-banner-text {
+    transform: translate(-80%, -50%);
+  }
 }
