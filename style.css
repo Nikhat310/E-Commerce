@@ -72,10 +72,10 @@ p {
   position: relative;
 }
 .home .home-banner-1 {
-  background-image: url(https://th.bing.com/th/id/R.931432e551d0e915d9763a53e5300474?rik=I5OUV%2bKPAv5oMQ&riu=http%3a%2f%2fwww.fashiongonerogue.com%2fwp-content%2fuploads%2f2013%2f08%2fzara-fall-ads4.jpg&ehk=myHmls4wAWIYHxpq25IwG369tkhxdqlluzMpcDmd2Bo%3d&risl=&pid=ImgRaw&r=0);
+  background-image: url(https://inmodels.agency/upload/medialibrary/a95/1179.jpg);
 }
 .home .home-banner-2 {
-  background-image: url(https://media.istockphoto.com/id/1468581382/photo/beautiful-asian-female-woman-girl-holding-shopping-bags-walk-enjoy-smiling-while-doing.jpg?s=170667a&w=0&k=20&c=PFsRo035spUj5sxYE7oyuW94lkIz8ie7zitfx4gIcMI=);
+  background-image: url(https://img.freepik.com/free-photo/girl-shopping_1303-3546.jpg);
 }
 .home .home-banner .home-banner-text {
   position: absolute;
@@ -99,6 +99,126 @@ p {
   font-size: 3rem;
   font-weight: 600;
   color: var(--text-danger);
+}
+.offers {
+  padding-top: 8.7rem;
+}
+.offers .offer-box .offer-image::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -100%;
+  z-index: 2;
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  transform: skewX(-25deg);
+}
+.offers .offer-box .offer-image img {
+  transform: scale(1.02);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.offers .offer-box:hover .offer-image::before {
+  animation: effect_shine 1s;
+}
+@keyframes effect_shine {
+  100% {
+    left: 150%;
+  }
+}
+
+.offers .offer-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.offers .offer-box .offer-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  transition: all 2.5ms ease-out;
+  justify-content: center;
+  align-items: center;
+}
+.offers .offer-box .offer-info .heading-bigger {
+  font-size: 4.375rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: var(--text-white);
+}
+.offers .offer-box .offer-info .offer-title-1 {
+  color: var(--text-white);
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+.offers .offer-box .offer-info .btn-outline-danger {
+  color: var(--text-white);
+  border-color: var(--bg-white);
+  transition: all 0.3s ease-in-out;
+}
+.offers .offer-box .offer-info .btn-outline-danger:hover {
+  border-color: var(--bg-danger);
+  background-color: var(--bg-danger);
+}
+.products {
+  padding-top: 8.75rem;
+}
+.headline h2::before {
+  content: "";
+  width: 30%;
+  height: 0.125rem;
+  background-color: var(--bg-danger);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.625rem;
+}
+.products a {
+  text-decoration: none;
+  color: var(--text-black);
+}
+.product-list .product-image img {
+  transition: all 500ms ease-in-out;
+}
+.product-list .product-image-secondary {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.product-list .product-image:hover .product-image-secondary {
+  opacity: 1;
 }
 
 /* media queries in all...i have screenshots */
